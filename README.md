@@ -1,6 +1,6 @@
 # CustomSoundBar
 
-This project changes glappatoni's [soundbar](https://github.com/glappatoni/soundbar) to run in the background as an OSx Agent Application and and adds a global keyboard shortcut `ctrl + alt + S` to access the sound board from anywhere.
+This project changes glappatoni's [soundbar](https://github.com/glappatoni/soundbar) to run in the background as an OSx Agent Application and and adds a global keyboard shortcut `ctrl + alt + S` to access the sound bar from anywhere.
 
 ## Sound Files
 
