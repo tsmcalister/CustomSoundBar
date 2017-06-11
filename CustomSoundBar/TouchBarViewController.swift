@@ -1,14 +1,7 @@
-//
-//  ViewController.swift
-//  CustomSoundBar
-//
-//  Created by Timmy on 07.06.17.
-//  Copyright © 2017 Timothy Mc Alister. All rights reserved.
-//
 
 import Cocoa
 
-class ViewController: NSViewController {
+class TouchBarViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

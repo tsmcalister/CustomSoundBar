@@ -8,18 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		A53FA5911EE89B270035497F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53FA5901EE89B270035497F /* AppDelegate.swift */; };
-		A53FA5931EE89B270035497F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53FA5921EE89B270035497F /* ViewController.swift */; };
 		A53FA5951EE89B270035497F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A53FA5941EE89B270035497F /* Assets.xcassets */; };
-		A53FA5981EE89B270035497F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53FA5961EE89B270035497F /* Main.storyboard */; };
+		A53FA59F1EE89ED60035497F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A53FA5991EE89B270035497F /* Info.plist */; };
+		A53FA5A11EE89EE90035497F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53FA5A01EE89EE90035497F /* Main.storyboard */; };
+		A53FA5A31EE8ACAB0035497F /* TouchBarWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53FA5A21EE8ACAB0035497F /* TouchBarWindowController.swift */; };
+		A53FA5A51EE8ADD30035497F /* TouchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53FA5A41EE8ADD30035497F /* TouchBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A53FA58D1EE89B270035497F /* CustomSoundBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomSoundBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53FA5901EE89B270035497F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A53FA5921EE89B270035497F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A53FA5941EE89B270035497F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A53FA5971EE89B270035497F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A53FA5991EE89B270035497F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A53FA5991EE89B270035497F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A53FA5A01EE89EE90035497F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A53FA5A21EE8ACAB0035497F /* TouchBarWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchBarWindowController.swift; sourceTree = "<group>"; };
+		A53FA5A41EE8ADD30035497F /* TouchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +56,11 @@
 			isa = PBXGroup;
 			children = (
 				A53FA5901EE89B270035497F /* AppDelegate.swift */,
-				A53FA5921EE89B270035497F /* ViewController.swift */,
 				A53FA5941EE89B270035497F /* Assets.xcassets */,
-				A53FA5961EE89B270035497F /* Main.storyboard */,
+				A53FA5A01EE89EE90035497F /* Main.storyboard */,
 				A53FA5991EE89B270035497F /* Info.plist */,
+				A53FA5A41EE8ADD30035497F /* TouchBarViewController.swift */,
+				A53FA5A21EE8ACAB0035497F /* TouchBarWindowController.swift */,
 			);
 			path = CustomSoundBar;
 			sourceTree = "<group>";
@@ -120,8 +124,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A53FA5A11EE89EE90035497F /* Main.storyboard in Resources */,
 				A53FA5951EE89B270035497F /* Assets.xcassets in Resources */,
-				A53FA5981EE89B270035497F /* Main.storyboard in Resources */,
+				A53FA59F1EE89ED60035497F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,23 +137,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A53FA5931EE89B270035497F /* ViewController.swift in Sources */,
+				A53FA5A51EE8ADD30035497F /* TouchBarViewController.swift in Sources */,
 				A53FA5911EE89B270035497F /* AppDelegate.swift in Sources */,
+				A53FA5A31EE8ACAB0035497F /* TouchBarWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A53FA5961EE89B270035497F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A53FA5971EE89B270035497F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A53FA59A1EE89B270035497F /* Debug */ = {

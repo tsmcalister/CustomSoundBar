@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="CustomSoundBar" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="CustomSoundBar" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="Show Window" id="QcA-v9-qOQ">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <segue destination="4ub-lx-Tlb" kind="show" id="P3c-aU-Le9"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="About CustomSoundBar" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                                <segue destination="DeK-e3-JoU" kind="modal" id="dz0-iS-8n2"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <segue destination="zYl-iY-d2s" kind="modal" id="DjO-NO-gwi"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                                        <menuItem title="Services" id="NMo-om-nkz">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                                        <menuItem title="Hide Agent Based App with Storyboards" keyEquivalent="h" id="Olw-nP-bQN">
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Show All" id="Kd2-mp-pUS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="Quit Agent Based App with Storyboards" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="CustomSoundBar" customModuleProvider="target">
+                    <connections>
+                        <outlet property="menu" destination="uQy-DD-JDr" id="28q-d9-5xT"/>
+                    </connections>
+                </customObject>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154" y="-113"/>
+        </scene>
+        <!--Preferences-->
+        <scene sceneID="eoM-TY-TOC">
+            <objects>
+                <tabViewController title="Preferences" selectedTabViewItemIndex="1" id="zYl-iY-d2s" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem label="Tab 1" identifier="" id="hjY-NB-QWA"/>
+                        <tabViewItem label="Tab 2" identifier="" id="dIY-4J-5cR"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="5Sc-Sc-Dng">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="hfM-cv-CBC" kind="relationship" relationship="tabItems" id="l4q-oY-4m7"/>
+                        <segue destination="11T-DJ-gPt" kind="relationship" relationship="tabItems" id="eIq-Qh-NPr"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="Bb9-5s-bLS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-319" y="521"/>
+        </scene>
+        <!--Tab 2-->
+        <scene sceneID="8fF-IG-Nts">
+            <objects>
+                <viewController title="Tab 2" id="hfM-cv-CBC" sceneMemberID="viewController">
+                    <view key="view" id="722-nm-KvL">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06s-z7-rZb">
+                                <rect key="frame" x="172" y="142" width="106" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Prefernces Tab 1" id="gh2-vE-z8u">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="06s-z7-rZb" firstAttribute="centerY" secondItem="722-nm-KvL" secondAttribute="centerY" id="2UN-3k-YlY"/>
+                            <constraint firstItem="06s-z7-rZb" firstAttribute="centerX" secondItem="722-nm-KvL" secondAttribute="centerX" id="9Jl-wJ-9gl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="hts-xY-luH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="789"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="hgZ-71-QiK">
+            <objects>
+                <viewController title="About" id="DeK-e3-JoU" sceneMemberID="viewController">
+                    <view key="view" id="K8n-WM-VCV">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dML-An-DxR">
+                                <rect key="frame" x="203" y="142" width="45" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="About!" id="JTq-UB-Yci">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="pft-Ur-Yut" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="399"/>
+        </scene>
+        <!--Tab 1-->
+        <scene sceneID="LOl-is-Tcc">
+            <objects>
+                <viewController title="Tab 1" id="11T-DJ-gPt" sceneMemberID="viewController">
+                    <view key="view" id="hSl-2V-0DW">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwh-yy-l6h">
+                                <rect key="frame" x="168" y="142" width="114" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Preferences Tab 2" id="zYk-b3-VVH">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Iwh-yy-l6h" firstAttribute="centerX" secondItem="hSl-2V-0DW" secondAttribute="centerX" id="CcA-Xh-mtx"/>
+                            <constraint firstItem="Iwh-yy-l6h" firstAttribute="centerY" secondItem="hSl-2V-0DW" secondAttribute="centerY" id="pfZ-Vl-1a5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="m67-gD-TPm" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154" y="1026"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="cYM-zb-xmg">
+            <objects>
+                <windowController storyboardIdentifier="TouchBar" id="4ub-lx-Tlb" customClass="TouchBarWindowController" customModule="CustomSoundBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="ZSZ-oD-sfv">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                    </window>
+                    <connections>
+                        <segue destination="kwK-lR-gKB" kind="relationship" relationship="window.shadowedContentViewController" id="fjS-aO-XDD"/>
+                    </connections>
+                </windowController>
+                <customObject id="vT6-ZM-sOd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--SoundBar-->
+        <scene sceneID="rgv-sO-gJT">
+            <objects>
+                <viewController title="SoundBar" id="kwK-lR-gKB" customClass="TouchBarViewController" customModule="CustomSoundBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="c84-4c-24O">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m3Y-r6-KWQ">
+                                <rect key="frame" x="216" y="111" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="C7r-vq-k2s"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="fIw-H3-tzW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-601" y="1455"/>
+        </scene>
+    </scenes>
+</document>
