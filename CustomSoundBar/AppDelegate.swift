@@ -1,5 +1,6 @@
 
 import Cocoa
+import Carbon
 
 @available(OSX 10.12.2, *)
 @NSApplicationMain
@@ -8,6 +9,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var touchBarWindow: TouchBarWindowController!
   
     @IBOutlet weak var menu: NSMenu!
+    
+    @IBAction func showWindowClicked(_ sender: Any!)
+    {
+        toggleWindow()
+    }
     
     
     var statusItem: NSStatusItem?
@@ -19,16 +25,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Make a status bar that has variable length (as opposed to being a standard square size)
         // -1 to indicate "variable length"
-        self.statusItem = NSStatusBar.system().statusItem(withLength: 1)
+        self.statusItem = NSStatusBar.system().statusItem(withLength: -1)
         
         // Set the text that appears in the menu bar
-        self.statusItem!.title = "🎶"
-        self.statusItem?.image?.size = NSSize(width: 20, height: 18)
-        self.statusItem?.length = 70
-        // image should be set as tempate so that it changes when the user sets the menu bar to a dark theme
-        self.statusItem?.image?.isTemplate = true
-        
-        
+        self.statusItem!.title = "🎺"
         
         // Set the menu that should appear when the item is clicked
         self.statusItem!.menu = self.menu
@@ -45,23 +45,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Initialise WindowController
         let storyboard = NSStoryboard(name: "Main",bundle: nil)
         touchBarWindow = storyboard.instantiateController(withIdentifier: "TouchBar") as! TouchBarWindowController
+        
     }
     
     func handler(event: NSEvent!) {
         if event.modifierFlags == self.keyMask{
             if event.keyCode == self.keyCode{
-                if(touchBarWindow.window!.isVisible)
-                {
-                    touchBarWindow.close()
-                    print("Closed Window")
-                }
-                else
-                {
-                    touchBarWindow.showWindow(self)
-                    NSApplication.shared().activate(ignoringOtherApps: true)
-                    print("Opened Window")
-                }
+                toggleWindow()
             }
+        }
+    }
+    
+    func toggleWindow()
+    {
+        if(touchBarWindow.window!.isVisible)
+        {
+            touchBarWindow.close()
+            print("Closed Window")
+        }
+        else
+        {
+            touchBarWindow.showWindow(self)
+            NSApplication.shared().activate(ignoringOtherApps: true)
+            print("Opened Window")
         }
     }
     

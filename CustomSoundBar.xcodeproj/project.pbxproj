@@ -13,6 +13,7 @@
 		A53FA5A11EE89EE90035497F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53FA5A01EE89EE90035497F /* Main.storyboard */; };
 		A53FA5A31EE8ACAB0035497F /* TouchBarWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53FA5A21EE8ACAB0035497F /* TouchBarWindowController.swift */; };
 		A53FA5A51EE8ADD30035497F /* TouchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53FA5A41EE8ADD30035497F /* TouchBarViewController.swift */; };
+		A53FA5AB1EEDA72C0035497F /* TouchBarWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53FA5AA1EEDA72C0035497F /* TouchBarWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		A53FA5A01EE89EE90035497F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A53FA5A21EE8ACAB0035497F /* TouchBarWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchBarWindowController.swift; sourceTree = "<group>"; };
 		A53FA5A41EE8ADD30035497F /* TouchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchBarViewController.swift; sourceTree = "<group>"; };
+		A53FA5AA1EEDA72C0035497F /* TouchBarWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchBarWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				A53FA5991EE89B270035497F /* Info.plist */,
 				A53FA5A41EE8ADD30035497F /* TouchBarViewController.swift */,
 				A53FA5A21EE8ACAB0035497F /* TouchBarWindowController.swift */,
+				A53FA5AA1EEDA72C0035497F /* TouchBarWindow.swift */,
 			);
 			path = CustomSoundBar;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				A53FA5A51EE8ADD30035497F /* TouchBarViewController.swift in Sources */,
 				A53FA5911EE89B270035497F /* AppDelegate.swift in Sources */,
 				A53FA5A31EE8ACAB0035497F /* TouchBarWindowController.swift in Sources */,
+				A53FA5AB1EEDA72C0035497F /* TouchBarWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,7 @@ import AVFoundation
 
 fileprivate extension NSTouchBarCustomizationIdentifier {
     
-    static let touchBar = NSTouchBarCustomizationIdentifier("digital.fino.Soundbar")
+    static let touchBar = NSTouchBarCustomizationIdentifier("tsmca.CustomSoundBar")
 }
 
 class TouchBarWindowController: NSWindowController, NSTouchBarDelegate {
@@ -19,10 +19,18 @@ class TouchBarWindowController: NSWindowController, NSTouchBarDelegate {
     override func windowDidLoad() {
         super.windowDidLoad()
         
+        self.window = TouchBarWindow()
+        self.window!.isOpaque = false
+        self.window!.backgroundColor = .clear
+        self.window!.titleVisibility = NSWindowTitleVisibility.hidden;
+        self.window!.titlebarAppearsTransparent = true
+        self.window!.hasShadow = false
+        let xPos = NSWidth((self.window!.screen?.frame)!)/2 - NSWidth(self.window!.frame)/2
+        let yPos = NSHeight((self.window!.screen?.frame)!)/2 - NSHeight(self.window!.frame)/2
+        let frame = NSMakeRect(xPos, yPos, NSWidth(self.window!.frame), NSHeight(self.window!.frame))
+        self.window!.setFrame(frame, display: true)
         
-        // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     }
-    
     
     func playSound(sender: NSButton) {
         let fileUrl = getUrlFromTitle(title: sender.title)
@@ -148,7 +156,7 @@ class TouchBarWindowController: NSWindowController, NSTouchBarDelegate {
     override func keyDown(with event: NSEvent) {
         if event.modifierFlags == self.keyMask{
             if event.keyCode == self.keyCode{
-                self.window?.close()
+                self.window!.close()
             }
         }
     }
