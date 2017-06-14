@@ -1,6 +1,6 @@
 # CustomSoundBar
 
-This project changes glappatoni's [soundbar](https://github.com/glappatoni/soundbar) to run in the background as an OSx Agent Application and and adds a global keyboard shortcut `ctrl + alt + S` to access the sound bar from anywhere.
+This project modifies glappatoni's [soundbar](https://github.com/glappatoni/soundbar) to run in the background as an OSx Agent Application and adds a global keyboard shortcut `⌃ + ⌥ + S` to access the sound bar from anywhere.
 
 CustomSoundBar lets you to play custom sounds from the MacBook touch bar.
 
