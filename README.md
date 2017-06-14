@@ -4,6 +4,8 @@ This project modifies glappatoni's [soundbar](https://github.com/glappatoni/soun
 
 CustomSoundBar lets you to play custom sounds from the MacBook touch bar.
 
+![Screenshot of CustomSoundBar](https://raw.githubusercontent.com/tsmcalister/CustomSoundBar/master/Images/screenshot.png)
+
 ## Sound Files
 
 Sound files are loaded from your  `/Home/Music/soundbar`  folder. The touch bar displays a button for each sound file with a label corresponding to the file's name.
